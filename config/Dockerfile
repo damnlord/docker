@@ -125,9 +125,6 @@ RUN php composer-setup.php --quiet && rm composer-setup.php && \
 	mv composer.phar /usr/local/sbin/composer && \
 	chmod +x /usr/local/sbin/composer
 
-
-
-ADD run.sh /usr/local/bin/run
 RUN chmod +x  /usr/local/bin/*
 
 RUN apt-get autoremove -y && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*

@@ -1,7 +1,8 @@
 #! /bin/bash
 if [ -f ../.env ]; then
     # Load Environment Variables
+    # shellcheck disable=SC2046
     export $(cat ../.env | grep -v '#' | sed 's/\r$//'  )
 fi
 
-docker exec --user www-data -it ${APP_NAME}_app /bin/bash;
+docker exec --user www-data -it "${APP_NAME}"_app /bin/bash;

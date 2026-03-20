@@ -8,6 +8,7 @@ services:
       - ${LOCAL_WORKING_DIR}:${REMOTE_WORKING_DIR}
       - ./config/php/config/custom.ini:/usr/local/etc/php/conf.d/custom.ini
       - ./config/php/config/www.conf:/usr/local/etc/php-fpm.d/www.conf
+      - ./config/bash_history:/var/www/.bash_history
     networks:
       - app
     depends_on:
